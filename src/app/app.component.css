@@ -1,0 +1,5 @@
+.containerPage {
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  height: 100vh;
+}

@@ -1,0 +1,16 @@
+.header {
+  background: rgb(247, 243, 250);
+  background: linear-gradient(
+    172deg,
+    rgba(247, 243, 250, 1) 0%,
+    rgba(242, 240, 244, 1) 100%
+  );
+  height: 50px;
+  display: flex;
+}
+
+.logo {
+  max-width: 9.2rem;
+  padding: 15px 20px 15px 40px;
+  font-weight: 700;
+}
