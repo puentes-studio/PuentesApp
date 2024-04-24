@@ -31,21 +31,7 @@
 }
 
 .home-title {
-  font-optical-sizing: auto;
-  /* font-weight: <weight>; */
-  font-style: normal;
-  font-size: 3.125rem;
-  color: var(--gray-400);
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: -0.125rem;
-  margin: 0;
   font-family: "AbrilFatce", "Chonburi", serif;
-}
-
-p {
-  margin: 0;
-  color: var(--gray-700);
 }
 
 main {
