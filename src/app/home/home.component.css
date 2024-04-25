@@ -43,6 +43,21 @@ main {
   padding: 1rem;
   box-sizing: inherit;
   position: relative;
+  background-image: url("../../assets/img/img-bg-1.png");
+}
+
+@media (max-width: 580px) {
+  main {
+    background-image: hidden;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 12%,
+      rgba(11, 1, 18, 1) 44%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
 }
 
 .angular-logo {
