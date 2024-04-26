@@ -30,20 +30,16 @@
   box-sizing: border-box;
 }
 
+.frontEnd-title {
+  font-family: "Abril Fatface", serif;
+}
+
 .home-title {
-  font-family: "AbrilFatce", "Chonburi", serif;
+  font-family: "Oswald", sans-serif;
 }
 
 main {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  box-sizing: inherit;
-  position: relative;
-  background-image: url("../../assets/img/img-bg-1.png");
+  background-image: url("../../assets/img/bg-puentes-03.png");
 }
 
 @media (max-width: 580px) {
@@ -70,14 +66,6 @@ main {
   width: 100%;
   max-width: 700px;
   margin-bottom: 3rem;
-}
-
-.content h1 {
-  margin-top: 1.75rem;
-}
-
-.content p {
-  margin-top: 1.5rem;
 }
 
 .divider {
