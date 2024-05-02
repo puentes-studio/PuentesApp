@@ -7,6 +7,7 @@ module.exports = {
     abrilFatface: ['"Abril Fatface"', "serif"],
     chonburi: ['"Chonburi"', "serif"],
     oswald: ['"Oswald"', "sans-serif"],
+    bigShouldersDisplay: ['"Big Shoulders Display"', "sans-serif"],
   },
   fontWeight: {
     // Poppins
