@@ -38,11 +38,19 @@
   font-family: "Big Shoulders Display", sans-serif;
 }
 
+/* .text-10xl {
+  font-size: 10rem;
+} */
+
+.font-p {
+  font-family: "Poppins", sans-serif;
+}
+
 main {
   background-image: url("../../assets/img/bg-puentes-03.png");
 }
 
-@media (max-width: 580px) {
+/* @media (max-width: 580px) {
   main {
     background-image: hidden;
     background: rgb(0, 0, 0);
@@ -54,15 +62,7 @@ main {
       rgba(0, 0, 0, 1) 100%
     );
   }
-}
-
-.content {
-  display: flex;
-
-  width: 100%;
-  max-width: 700px;
-  margin-bottom: 3rem;
-}
+} */
 
 .divider {
   width: 1px;
@@ -118,16 +118,29 @@ main {
   margin-inline-start: 0.25rem;
 }
 
-@media screen and (max-width: 650px) {
-  .content {
-    flex-direction: column;
-    width: max-content;
+@media (min-width: 768px) {
+  .text-10xl {
+    font-size: 10rem;
   }
+}
 
+@media screen and (max-width: 650px) {
   .divider {
     height: 1px;
     width: 100%;
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1.5rem;
+  }
+
+  main {
+    background-image: hidden;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 12%,
+      rgba(11, 1, 18, 1) 44%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 }
