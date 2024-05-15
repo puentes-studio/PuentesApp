@@ -6,6 +6,14 @@ import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  // boolean variable to track the mobile menu state
+  isMobileMenuOpen = false;
+
+  // method to toggle the mobile menu state
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
 
   ngOnInit(): void {
