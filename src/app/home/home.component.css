@@ -50,6 +50,13 @@ main {
   background-image: url("../../assets/img/bg-puentes-03.png");
 }
 
+.black-bg {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15%); 
+  transition: background-color 0.7s ease, backdrop-filter 0.7s ease;
+}
+
 .divider {
   width: 1px;
   background: var(--red-to-pink-to-purple-vertical-gradient);
