@@ -1,0 +1,22 @@
+.hello-title {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.name-title {
+  font-family: "Abril Fatface", serif;
+  /* font-family: "Big Shoulders Display", sans-serif; */
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+.min-h-img {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .min-h-img {
+    height: 450px;
+  }
+}
