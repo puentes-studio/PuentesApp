@@ -58,8 +58,8 @@ main {
 }
 
 .divider {
-  width: 1px;
-  background: var(--red-to-pink-to-purple-vertical-gradient);
+  width: 2px;
+  background: white;
   margin-inline: 0.5rem;
 }
 
@@ -133,6 +133,11 @@ main {
 @media (min-width: 768px) {
   .text-10xl {
     font-size: 10rem;
+  }
+  .divider {
+    width: 2px;
+    background: white;
+    margin-inline: 0.5rem;
   }
 }
 
