@@ -1,1 +1,36 @@
-<p>works works!</p>
+<ul class="projects">
+  <li *ngFor="let project of projects.data">
+    <ul>
+      <li
+        *ngFor="let item of project.list; let i = index"
+        [attr.data-index]="i"
+        class="project-container"
+      >
+        <figure class="h-48">
+          <img [src]="item.imageUrl" class="logo-client" alt="Project-logo" />
+        </figure>
+        <div class="project-info">
+          <h3 class="project-title">{{ item.name }}</h3>
+          <div class="links-container">
+            <a
+              class="project-website"
+              target="_blank"
+              [href]="item.projectLink"
+              rel="noopener noreferrer"
+            >
+              See project
+            </a>
+            <a
+              class="project-website"
+              target="_blank"
+              [href]="item.repositoryLink"
+              rel="noopener noreferrer"
+            >
+              See Repository
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
