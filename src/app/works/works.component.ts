@@ -19,7 +19,7 @@ export class WorksComponent implements OnInit {
           {
             name: 'Unika HR',
             imageUrl: '../../assets/projects/unika.png', // Ensure you provide the correct path
-            projectLink: 'https://unikahr.com/',
+            projectLink: 'https://unikahr.vercel.app/',
             repositoryLink: '',
           },
         ],
