@@ -1,12 +1,13 @@
 <ul class="projects">
+  <h2 class="text-white">Selected works</h2>
   <li *ngFor="let project of projects.data">
-    <ul>
+    <ul class="grid sm:grid-cols-3 md:grid-cols-4 justify-center">
       <li
         *ngFor="let item of project.list; let i = index"
         [attr.data-index]="i"
         class="project-container"
       >
-        <figure class="max-h-48 max-w-80">
+        <figure class="max-h-48 max-w-lg">
           <img [src]="item.imageUrl" class="logo-client" alt="Project-logo" />
         </figure>
         <div class="project-info">

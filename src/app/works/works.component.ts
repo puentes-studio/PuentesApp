@@ -11,26 +11,35 @@ export class WorksComponent implements OnInit {
       {
         list: [
           {
-            name: 'Your Cloud',
-            imageUrl: '../../assets/projects/logotype.png', // Ensure you provide the correct path
-            projectLink: '',
-            repositoryLink: '',
-          },
-          {
             name: 'Unika HR',
-            imageUrl: '../../assets/projects/unika.png', // Ensure you provide the correct path
+            imageUrl: '../../assets/projects/unika.png',
             projectLink: 'https://unikahr.vercel.app/',
             repositoryLink: '',
           },
-        ],
-      },
-      {
-        list: [
+          {
+            name: 'Your Cloud',
+            imageUrl: '../../assets/projects/logotype.png',
+            projectLink: '',
+            repositoryLink: '',
+          },
           {
             name: 'Pokemon Desk',
             imageUrl: '../../assets/projects/pokemon.webp',
             projectLink: 'https://pokemon-black-sable.vercel.app/',
             repositoryLink: 'https://github.com/puentes-studio/PokemonBlack',
+          },
+          {
+            name: 'Cube Editorial',
+            imageUrl:
+              '../../assets/projects/prev_editorial_moda_optimizado.png',
+            projectLink: '',
+            repositoryLink: '',
+          },
+          {
+            name: 'OA Forum',
+            imageUrl: '../../assets/projects/prev_oaforum_optimizado.png',
+            projectLink: '',
+            repositoryLink: '',
           },
         ],
       },
