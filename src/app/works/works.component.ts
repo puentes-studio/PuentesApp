@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
-  // styleUrls:   // Corrected property name
+  styleUrl: './works.component.css',
 })
 export class WorksComponent implements OnInit {
   projects = {
