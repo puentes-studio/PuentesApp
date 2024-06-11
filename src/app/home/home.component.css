@@ -47,7 +47,7 @@
 }
 
 main {
-  background-image: url("../../assets/img/bg-puentes-03.png");
+  background-image: url("../../assets/img/bg-developer-01.png");
 }
 
 .black-bg {
@@ -73,14 +73,15 @@ main {
 a {
   display: block;
   width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* line-height: 40px; */
   text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
+  background-color: black;
+  border: 3px solid #ffffff;
   letter-spacing: 2px;
   text-align: center;
+  justify-content: center;
   position: relative;
   transition: all 0.35s;
   overflow: hidden;
@@ -105,7 +106,7 @@ a:after {
 }
 
 a:hover {
-  color: #fff;
+  color: #d6f879;
 }
 
 a:hover:after {
