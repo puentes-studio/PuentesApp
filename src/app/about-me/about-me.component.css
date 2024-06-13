@@ -11,8 +11,8 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
-.min-h-img {
-  height: 250px;
+.max-h-img {
+  max-height: 600px;
 }
 
 @media (min-width: 768px) {
