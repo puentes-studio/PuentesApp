@@ -1,3 +1,29 @@
+/* .about-container {
+  animation: spawn 2s ease-in-out forwards;
+}
+
+.about-container:before {
+  content: "";
+  position: absolute;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.about-container:hover:after {
+  content: "";
+  position: absolute;
+  background-image: var(--gif-texture);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 64%;
+  z-index: 3;
+} */
+
 .hello-title {
   font-family: "Big Shoulders Display", sans-serif;
 }

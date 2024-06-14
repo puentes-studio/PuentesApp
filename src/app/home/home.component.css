@@ -26,8 +26,53 @@
 
   --pill-accent: var(--bright-blue);
 
+  --linear-rainbow: linear-gradient(
+    to right,
+    #ede6bf,
+    #ecc947,
+    #cb5a31,
+    #6f5d79,
+    #4e779a
+  );
+  --circle-rainbow: radial-gradient(
+    circle at left top,
+    #ede6bf,
+    #ecc947,
+    #cb5a31,
+    #6f5d79,
+    #4e779a
+  );
+  --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+  --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gif);
+
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+}
+
+.main {
+  animation: spawn 2s ease-in-out forwards;
+}
+
+.main:before {
+  content: "";
+  position: absolute;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.main:hover:after {
+  content: "";
+  position: absolute;
+  background-image: var(--gif-texture);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 64%;
+  z-index: 3;
 }
 
 .frontEnd-title {
@@ -38,9 +83,9 @@
   font-family: "Big Shoulders Display", sans-serif;
 }
 
-/* .text-10xl {
+.text-10xl {
   font-size: 10rem;
-} */
+}
 
 .font-p {
   font-family: "Poppins", sans-serif;
@@ -107,6 +152,8 @@ a:after {
 
 a:hover {
   color: #d6f879;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 a:hover:after {
@@ -131,7 +178,8 @@ a::before {
 a::after {
   content: attr(data-replace);
   height: 100%;
-  top: 0;
+
+  padding-top: 20px;
   transform-origin: 100% 50%;
   transform: translate3d(200%, 0, 0);
   transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
@@ -151,7 +199,7 @@ a:hover span {
 }
 
 /* Presentational Styles */
-/* body {
+body {
   display: grid;
   font-family: "Poppins", sans-serif;
   font-size: 27px;
@@ -165,9 +213,9 @@ a {
   color: #bfff00;
   font-weight: 700;
   vertical-align: top;
-} */
+}
 
-/* .hover-cursor::before,
+.hover-cursor::before,
 .hover-cursor::after {
   content: "";
   position: absolute;
@@ -175,16 +223,16 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); Adjust the opacity as needed
+  background-color: rgba(0, 0, 0, 0.5);
   clip-path: circle(0% at 50% 50%);
   transition: clip-path 0.3s ease;
 }
 
 /* Define hover effect */
-.hover-cursor:hover::before,
+/* .hover-cursor:hover::before,
 .hover-cursor:hover::after {
   clip-path: circle(50% at 50% 50%);
-}
+} */
 .pill-group {
   display: flex;
   flex-direction: column;

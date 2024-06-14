@@ -22,7 +22,11 @@ module.exports = {
     black: 900,
   },
   theme: {
-    extend: {},
+    extend: {
+      rotate: {
+        10: "10deg",
+      },
+    },
   },
   plugins: [],
 };
