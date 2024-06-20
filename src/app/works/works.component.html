@@ -1,6 +1,15 @@
 <div class="divider" role="separator" aria-label="Divider"></div>
 <div class="h-fit md:min-h-lvh bg-black md:bg-gray-900">
-  <h1 class="works-title text-white text-6xl md:text-8xl">SELECTED WORK</h1>
+  <div class="flex justify-center md:justify-start">
+    <h1
+      class="works-title cursor-none hello-title text-slate-300 text-8xl font-medium md:text-9xl tracking-tight mr-3 italic"
+    >
+      SELECTED WORK
+    </h1>
+  </div>
+
+  <!-- first option -->
+
   <ul class="projects">
     <li *ngFor="let project of projects.data">
       <ul class="grid sm:grid-cols-3 md:grid-cols-4 justify-center">
@@ -14,6 +23,55 @@
           </figure>
           <div class="project-info">
             <h3 class="project-title">{{ item.name }}</h3>
+            <div class="links-container">
+              <a
+                class="project-website"
+                target="_blank"
+                [href]="item.projectLink"
+                rel="noopener noreferrer"
+              >
+                See project
+              </a>
+              <a
+                class="project-website"
+                target="_blank"
+                [href]="item.repositoryLink"
+                rel="noopener noreferrer"
+              >
+                See Repository
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- second option -->
+
+  <ul class="projects">
+    <li *ngFor="let project of projects.data">
+      <ul class="flex flex-col">
+        <li
+          *ngFor="let item of project.list; let i = index"
+          [attr.data-index]="i"
+          class="project-container"
+        >
+          <figure class="max-h-48 max-w-lg">
+            <img
+              [src]="item.imageUrl"
+              class="logo-client bg-cover hidden"
+              alt="Project-logo"
+            />
+          </figure>
+          <div class="project-info">
+            <h3
+              class="project-title text-white text-4xl"
+              (mouseover)="showImage(i)"
+              (mouseout)="hideImage(i)"
+            >
+              {{ item.name }}
+            </h3>
             <div class="links-container">
               <a
                 class="project-website"

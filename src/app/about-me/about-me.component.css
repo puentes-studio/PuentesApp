@@ -1,4 +1,4 @@
-/* .about-container {
+.about-container {
   animation: spawn 2s ease-in-out forwards;
 }
 
@@ -22,7 +22,7 @@
   pointer-events: none;
   opacity: 64%;
   z-index: 3;
-} */
+}
 
 .hello-title {
   font-family: "Big Shoulders Display", sans-serif;

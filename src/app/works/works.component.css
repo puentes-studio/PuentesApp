@@ -46,6 +46,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .works-title {
   font-family: "Big Shoulders Display", sans-serif;
 }

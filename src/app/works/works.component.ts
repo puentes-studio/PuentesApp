@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
-  styleUrl: './works.component.css',
+  styleUrls: ['./works.component.css'],
 })
 export class WorksComponent implements OnInit {
   projects = {
@@ -49,4 +49,20 @@ export class WorksComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  showImage(index: number): void {
+    const img = document.getElementById('project-img-' + index);
+    if (img) {
+      img.classList.remove('hidden');
+      img.classList.add('visible');
+    }
+  }
+
+  hideImage(index: number): void {
+    const img = document.getElementById('project-img-' + index);
+    if (img) {
+      img.classList.remove('visible');
+      img.classList.add('hidden');
+    }
+  }
 }
