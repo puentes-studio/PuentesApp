@@ -35,10 +35,21 @@
     />
   </div> -->
 
-  <div class="about-container flex mt-16 items-center">
+  <!-- <div class="flex mt-16 items-center">
     <img
       src="assets/img/dev-img01.png"
-      class="about-img cursor-progress max-h-img min-h-60 mb-7 -mt-10 sm:mt-0 md:mt-0 md:ml-8 md:mr-12 ease-in duration-100 hover:blur-sm hover:rotate-[10deg]"
+      class="about-img cursor-progress max-h-img min-h-60 mb-7 -mt-10 sm:mt-0 md:mt-0 md:ml-8 md:mr-12 rounded-lg ease-in duration-100 hover:blur-sm hover:rotate-[10deg]"
+      alt="About me Developer, Frontend developer, Designer"
+    />
+  </div> -->
+
+  <div class="flex mt-16 items-center">
+    <img
+      #aboutImg
+      src="assets/img/dev-img02.png"
+      (mouseover)="changeImage('assets/img/dev-img01.png')"
+      (mouseout)="resetImage()"
+      class="about-img cursor-progress max-h-img min-h-60 mb-7 -mt-10 sm:mt-0 md:mt-0 md:ml-8 rounded-full"
       alt="About me Developer, Frontend developer, Designer"
     />
   </div>
