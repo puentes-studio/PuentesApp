@@ -52,15 +52,18 @@
 
 .works-title {
   font-family: "Big Shoulders Display", sans-serif;
+  font-size: 8em;
+  margin-right: 4rem;
 }
 
 .project-title {
-  font-family: "Abril Fatface", serif;
+  font-family: "Big Shoulders Display", sans-serif;
   /* font-family: "Big Shoulders Display", sans-serif; */
 }
 
 .project-website {
   font-family: "Poppins", sans-serif;
+  font-size: small;
 }
 
 .divider {

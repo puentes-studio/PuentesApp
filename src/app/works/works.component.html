@@ -1,53 +1,14 @@
 <div class="divider" role="separator" aria-label="Divider"></div>
-<div class="h-fit md:min-h-lvh bg-black md:bg-gray-900">
-  <div class="flex justify-center md:justify-start">
+<div class="h-fit md:min-h-lvh bg-black">
+  <div class="flex justify-end">
     <h1
-      class="works-title cursor-none hello-title text-yellow-300 text-8xl font-medium md:text-9xl tracking-tight mr-3 italic"
+      class="works-title cursor-none text-teal-200 font-medium md:text-9xl tracking-tight mt-8 mb-8"
     >
-      SELECTED WORK
+      &lt; WORK
     </h1>
   </div>
 
-  <!-- first option -->
-
-  <ul class="projects">
-    <li *ngFor="let project of projects.data">
-      <ul class="grid sm:grid-cols-3 md:grid-cols-4 justify-center">
-        <li
-          *ngFor="let item of project.list; let i = index"
-          [attr.data-index]="i"
-          class="project-container"
-        >
-          <figure class="max-h-48 max-w-lg">
-            <img [src]="item.imageUrl" class="logo-client" alt="Project-logo" />
-          </figure>
-          <div class="project-info">
-            <h3 class="project-title">{{ item.name }}</h3>
-            <div class="links-container">
-              <a
-                class="project-website"
-                target="_blank"
-                [href]="item.projectLink"
-                rel="noopener noreferrer"
-              >
-                See project
-              </a>
-              <a
-                class="project-website"
-                target="_blank"
-                [href]="item.repositoryLink"
-                rel="noopener noreferrer"
-              >
-                See Repository
-              </a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <!-- second option -->
+  <!-- Projects list -->
 
   <ul class="projects">
     <li *ngFor="let project of projects.data">
@@ -55,41 +16,37 @@
         <li
           *ngFor="let item of project.list; let i = index"
           [attr.data-index]="i"
-          class="project-container"
+          class="project-container flex flex-row h-16 justify-between items-center"
+          [ngClass]="[item.backgroundColor, item.fontColor]"
         >
-          <figure class="max-h-48 max-w-lg">
+          <!-- <figure class="max-h-48 max-w-lg">
             <img
               [src]="item.imageUrl"
               class="logo-client bg-cover hidden"
               alt="Project-logo"
             />
-          </figure>
-          <div class="project-info">
+          </figure> -->
+          <div>
+            <h4 class="w-24 md:w-40 basis-1/5">{{ item.type }}</h4>
+          </div>
+          <div class="project-info basis-2/5 md:basis-3/5">
             <h3
-              class="project-title text-white text-4xl"
+              class="project-title text-4xl"
               (mouseover)="showImage(i)"
               (mouseout)="hideImage(i)"
             >
               {{ item.name }}
             </h3>
-            <div class="links-container">
-              <a
-                class="project-website"
-                target="_blank"
-                [href]="item.projectLink"
-                rel="noopener noreferrer"
-              >
-                See project
-              </a>
-              <a
-                class="project-website"
-                target="_blank"
-                [href]="item.repositoryLink"
-                rel="noopener noreferrer"
-              >
-                See Repository
-              </a>
-            </div>
+          </div>
+          <div class="links-container flex flex-col basis-1/5 text-center">
+            <a
+              class="project-website border border-white rounded-md w-20"
+              target="_blank"
+              [href]="item.projectLink"
+              rel="noopener noreferrer"
+            >
+              See
+            </a>
           </div>
         </li>
       </ul>
