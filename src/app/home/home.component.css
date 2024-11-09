@@ -311,4 +311,9 @@ a {
       rgba(0, 0, 0, 1) 100%
     );
   }
+
+  .main:hover:after {
+    content: none;
+    opacity: 0;
+  }
 }
