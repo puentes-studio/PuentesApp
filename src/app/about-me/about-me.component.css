@@ -38,11 +38,11 @@ p {
 }
 
 .max-h-img {
-  max-height: 600px;
+  max-height: 400px;
 }
 
 @media (min-width: 768px) {
   .min-h-img {
-    height: 450px;
+    height: 320px;
   }
 }
