@@ -16,28 +16,31 @@
         <li
           *ngFor="let item of project.list; let i = index"
           [attr.data-index]="i"
-          class="project-container flex flex-row h-16 md:justify-between items-center"
+          class="project-container flex flex-row h-16 justify-between items-center"
           [ngClass]="[item.backgroundColor, item.fontColor]"
         >
-          <div>
-            <h4 class="w-24 md:w-40 basis-1/5">{{ item.type }}</h4>
-          </div>
-          <div class="project-info basis-2/5 md:basis-3/5">
-            <h3
-              (mouseover)="toggleDescription(i, true)"
-              (mouseout)="toggleDescription(i, false)"
-              class="project-title text-7xl"
-            >
-              <span *ngIf="!hoveredIndex[i]">{{ item.name }}</span>
-              <span
-                class="project-description md:max-w-xl overflow-hidden max-w-80"
-                *ngIf="hoveredIndex[i]"
-                >{{
-                  item.projectDescription // | slice : 0 : getDescriptionSliceLength()
-                }}</span
+          <div class="project-info flex flex-row">
+            <div>
+              <h4 class="w-24 md:w-40 hidden basis-1/5">{{ item.type }}</h4>
+            </div>
+            <div class="basis-1/5 md:basis-2/3">
+              <h3
+                (mouseover)="toggleDescription(i, true)"
+                (mouseout)="toggleDescription(i, false)"
+                class="project-title text-7xl"
               >
-            </h3>
+                <span *ngIf="!hoveredIndex[i]">{{ item.name }}</span>
+                <span
+                  class="project-description md:max-w-xl overflow-hidden max-w-80"
+                  *ngIf="hoveredIndex[i]"
+                  >{{
+                    item.projectDescription // | slice : 0 : getDescriptionSliceLength()
+                  }}</span
+                >
+              </h3>
+            </div>
           </div>
+
           <div class="links-container flex flex-col basis-1/5 text-center">
             <a
               class="project-website border border-white rounded-md w-20"
