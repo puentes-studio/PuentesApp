@@ -26,6 +26,57 @@
   font-family: "Poppins", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
+.works-title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 8em;
+  margin-right: 4rem;
+}
+
+.project-title {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+}
+
+.project-website {
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--red-to-pink-to-purple-horizontal-gradient);
+}
+
+.project-container {
+  max-width: 100vw !important;
+  position: relative;
+  overflow: hidden; /* Hide text that exceeds the container */
+}
+
+/* Project info container should allow horizontal scrolling */
+.project-info {
+  position: relative;
+  overflow: hidden; /* Prevent text from overflowing initially */
+  white-space: nowrap; /* Prevent wrapping of text */
+
+  font-family: "Poppins", sans-serif;
+}
+
+.project-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ellipsis (...) when text overflows */
+  max-width: 100%;
+  transition: max-width 0.3s ease-in-out; /* Smooth transition for hover effect */
+  display: block;
+}
+
 @media (min-width: 768px) {
   .text-10xl {
     font-size: 10rem;
@@ -44,30 +95,14 @@
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1.5rem;
   }
-}
+  .project-description {
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
 
-.hidden {
-  display: none;
-}
-
-.works-title {
-  font-family: "Big Shoulders Display", sans-serif;
-  font-size: 8em;
-  margin-right: 4rem;
-}
-
-.project-title {
-  font-family: "Big Shoulders Display", sans-serif;
-  /* font-family: "Big Shoulders Display", sans-serif; */
-}
-
-.project-website {
-  font-family: "Poppins", sans-serif;
-  font-size: small;
-}
-
-.divider {
-  height: 1px;
-  width: 100%;
-  background: var(--red-to-pink-to-purple-horizontal-gradient);
+  .project-info:active .project-description,
+  .project-info:hover .project-description {
+    overflow-x: scroll;
+    max-width: 300px;
+  }
 }

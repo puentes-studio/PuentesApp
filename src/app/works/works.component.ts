@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-works',
@@ -15,6 +22,7 @@ export class WorksComponent implements OnInit {
             name: 'Unika HR',
             imageUrl: '../../assets/projects/unika.png',
             projectLink: 'https://unikahr.vercel.app/',
+            projectDescription: 'UX design, ',
             repositoryLink: '',
             backgroundColor: 'bg-purple-800',
             fontColor: 'text-purple-200',
@@ -61,23 +69,27 @@ export class WorksComponent implements OnInit {
     ],
   };
 
-  constructor() {}
+  hoveredIndex: boolean[] = [];
+  isMobileView: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
-  showImage(index: number): void {
-    const img = document.getElementById('project-img-' + index);
-    if (img) {
-      img.classList.remove('hidden');
-      img.classList.add('visible');
+  ngOnInit(): void {
+    this.hoveredIndex = this.projects.data[0].list.map(() => false);
+
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobileView = window.innerWidth < 500; // Detect mobile view
     }
   }
 
-  hideImage(index: number): void {
-    const img = document.getElementById('project-img-' + index);
-    if (img) {
-      img.classList.remove('visible');
-      img.classList.add('hidden');
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobileView = (event.target as Window).innerWidth < 500;
     }
+  }
+
+  toggleDescription(index: number, show: boolean): void {
+    this.hoveredIndex[index] = show;
   }
 }

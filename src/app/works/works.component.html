@@ -16,26 +16,26 @@
         <li
           *ngFor="let item of project.list; let i = index"
           [attr.data-index]="i"
-          class="project-container flex flex-row h-16 justify-between items-center"
+          class="project-container flex flex-row h-16 md:justify-between items-center"
           [ngClass]="[item.backgroundColor, item.fontColor]"
         >
-          <!-- <figure class="max-h-48 max-w-lg">
-            <img
-              [src]="item.imageUrl"
-              class="logo-client bg-cover hidden"
-              alt="Project-logo"
-            />
-          </figure> -->
           <div>
             <h4 class="w-24 md:w-40 basis-1/5">{{ item.type }}</h4>
           </div>
           <div class="project-info basis-2/5 md:basis-3/5">
             <h3
-              class="project-title text-4xl"
-              (mouseover)="showImage(i)"
-              (mouseout)="hideImage(i)"
+              (mouseover)="toggleDescription(i, true)"
+              (mouseout)="toggleDescription(i, false)"
+              class="project-title text-7xl"
             >
-              {{ item.name }}
+              <span *ngIf="!hoveredIndex[i]">{{ item.name }}</span>
+              <span
+                class="project-description md:max-w-xl overflow-hidden max-w-80"
+                *ngIf="hoveredIndex[i]"
+                >{{
+                  item.projectDescription // | slice : 0 : getDescriptionSliceLength()
+                }}</span
+              >
             </h3>
           </div>
           <div class="links-container flex flex-col basis-1/5 text-center">

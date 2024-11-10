@@ -12,6 +12,7 @@ const projectsData = [
       {
         name: "Your Cloud",
         imageUrl: yourCloudImage,
+        projectDescription: "UX design, front end and back end developement. Your Cloudd is an interface to host archives protected buy password".,
         projectLink: "",
         repositoryLink: "",
       },
