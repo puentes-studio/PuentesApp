@@ -25,10 +25,12 @@
                 <h4 class="w-24 md:w-40 hidden basis-1/5">{{ item.type }}</h4>
               </div>
               <div class="basis-1/5 md:basis-2/3">
-                <h3
+                <a
                   (mouseover)="toggleDescription(i, true)"
                   (mouseout)="toggleDescription(i, false)"
                   class="project-title text-7xl"
+                  [routerLink]="['/work-view']"
+                  rel="noopener noreferrer"
                 >
                   <span *ngIf="!hoveredIndex[i]">{{ item.name }}</span>
                   <span
@@ -36,7 +38,7 @@
                     *ngIf="hoveredIndex[i]"
                     >{{ item.projectDescription // }}</span
                   >
-                </h3>
+                </a>
               </div>
             </div>
           </div>
