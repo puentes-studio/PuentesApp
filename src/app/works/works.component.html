@@ -29,7 +29,7 @@
                   (mouseover)="toggleDescription(i, true)"
                   (mouseout)="toggleDescription(i, false)"
                   class="project-title text-7xl"
-                  [routerLink]="['/work-view']"
+                  [routerLink]="['/work-view', i]"
                   rel="noopener noreferrer"
                 >
                   <span *ngIf="!hoveredIndex[i]">{{ item.name }}</span>

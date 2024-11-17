@@ -10,7 +10,7 @@ const routes: Routes = [
     component: HeroComponent,
   },
   {
-    path: 'work-view',
+    path: 'work-view/:id',
     component: WorkViewComponent,
   },
 ];
