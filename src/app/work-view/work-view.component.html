@@ -1,21 +1,14 @@
-<div
-  class="flex items-center lg:items-end w-full h-lvh md:min-h-full box-sizing-inherit relative bg-no-repeat bg-cover"
-  id="main"
->
-  <div class="flex flex-col items-center lg:flex-row pb-11 pt-24 sm:pt-0">
-    <!-- left side -->
-    <div class="project-details">
-      <h1 class="text-4xl text-yellow-200">{{ project.name }}</h1>
-    </div>
+<div class="flex flex-row pt-16" id="main">
+  <!-- left side -->
+  <div class="">
+    <h1 class="text-4xl text-yellow-200">{{ project.name }}</h1>
   </div>
-  <div class="divider" role="separator" aria-label="Divider"></div>
 
   <!-- right side -->
-  <div
-    class="right-side w-fit min-h-full flex flex-col items-center md:items-start md:pl-2 justify-center"
-  >
+  <div class="">
     <img [src]="project.imageUrl" alt="{{ project.name }}" />
   </div>
+  <div class="divider" role="separator" aria-label="Divider"></div>
 </div>
 
 <div>
