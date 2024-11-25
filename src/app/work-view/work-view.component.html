@@ -37,7 +37,6 @@
     <div class="">
       <img [src]="project.imageUrl" alt="{{ project.name }}" />
     </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
   </div>
 </div>
 
@@ -81,8 +80,12 @@
 
   <img [src]="project.fullImageUrl" alt="{{ project.name }}" />
 </div>
-<div id="next case button">
-  <a class="text-white" [routerLink]="'/work-view/' + getNextProjectId()"
+<div class="divider" role="separator" aria-label="Divider"></div>
+
+<div class="flex justify-center" id="next case button">
+  <a
+    class="text-white text-3xl font-medium md:text-4xl tracking-tight"
+    [routerLink]="'/work-view/' + getNextProjectId()"
     >Next case</a
   >
 </div>

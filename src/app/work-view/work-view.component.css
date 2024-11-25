@@ -1,3 +1,69 @@
+:host {
+  --bright-blue: oklch(51.01% 0.274 263.83);
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  --french-violet: oklch(47.66% 0.246 305.88);
+  --vivid-pink: oklch(69.02% 0.277 332.77);
+  --hot-red: oklch(61.42% 0.238 15.34);
+  --orange-red: oklch(63.32% 0.24 31.68);
+
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
+
+  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+    180deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
+  );
+
+  --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+    90deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
+  );
+
+  --pill-accent: var(--bright-blue);
+
+  --linear-rainbow: linear-gradient(
+    to right,
+    #ede6bf,
+    #ecc947,
+    #cb5a31,
+    #6f5d79,
+    #4e779a
+  );
+  --circle-rainbow: radial-gradient(
+    circle at left top,
+    #ede6bf,
+    #ecc947,
+    #cb5a31,
+    #6f5d79,
+    #4e779a
+  );
+  --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+  --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gif);
+
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .divider {
+    width: 2px;
+    background: white;
+    margin-inline: 0.5rem;
+  }
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--red-to-pink-to-purple-horizontal-gradient);
+  margin-block: 1.5rem;
+}
+
 .project-name {
   font-family: "Big Shoulders Display", sans-serif;
 }
