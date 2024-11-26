@@ -13,7 +13,6 @@ a {
   transition: background-color 0.6s ease, backdrop-filter 0.6s ease;
 }
 
-/* #header {
-  backdrop-filter: blur(5px); 
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
-} */
+nav div[ng-reflect-ng-if] {
+  transition: all 0.3s ease-in-out;
+}

@@ -293,6 +293,10 @@ a {
 }
 
 @media screen and (max-width: 650px) {
+  .text-10xl {
+    font-size: 9rem;
+  }
+
   .divider {
     height: 1px;
     width: 100%;
