@@ -49,6 +49,10 @@
   box-sizing: border-box;
 }
 
+.banner {
+  width: -webkit-fill-available;
+}
+
 @media (min-width: 768px) {
   .divider {
     width: 2px;
@@ -75,14 +79,4 @@
 
 p {
   font-family: "Poppins", sans-serif;
-}
-
-.max-h-img {
-  max-height: 400px;
-}
-
-@media (min-width: 768px) {
-  .min-h-img {
-    height: 320px;
-  }
 }
