@@ -2,12 +2,21 @@ import {
   Component,
   HostListener,
   Inject,
+  Input,
   OnInit,
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Router, NavigationEnd } from '@angular/router'; // Import Router and NavigationEnd
+import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+
+interface Project {
+  type: string;
+  name: string;
+  projectDescription: string;
+  backgroundColor: string;
+  fontColor: string;
+}
 
 @Component({
   selector: 'app-works',
@@ -15,6 +24,8 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./works.component.css'],
 })
 export class WorksComponent implements OnInit {
+  @Input() maxProjects?: number;
+
   projects = {
     data: [
       {
@@ -22,18 +33,14 @@ export class WorksComponent implements OnInit {
           {
             type: 'WEB DVLP',
             name: 'Unika HR',
-            projectLink: 'https://unikahr.vercel.app/',
             projectDescription: 'UX | Frontend',
-            repositoryLink: '',
             backgroundColor: 'bg-rose-600',
             fontColor: 'text-purple-200',
           },
           {
             type: 'WEB DVLP',
             name: 'Camm & Hopper',
-            projectLink: '',
             projectDescription: 'UX | Frontend',
-            repositoryLink: '',
             backgroundColor: 'bg-fuchsia-500',
             fontColor: 'text-lime-200',
           },
@@ -41,8 +48,6 @@ export class WorksComponent implements OnInit {
             type: 'WEB DVLP',
             name: 'Your Cloud',
             projectDescription: 'UX | Frontend | Backend',
-            projectLink: '',
-            repositoryLink: '',
             backgroundColor: 'bg-blue-600',
             fontColor: 'text-lime-200',
           },
@@ -50,8 +55,6 @@ export class WorksComponent implements OnInit {
             type: 'WEB DVLP',
             name: 'Pokemon Desk',
             projectDescription: 'UX | Frontend | Backend',
-            projectLink: 'https://pokemon-black-sable.vercel.app/',
-            repositoryLink: 'https://github.com/puentes-studio/PokemonBlack',
             backgroundColor: 'bg-teal-400',
             fontColor: 'text-orange-200',
           },
@@ -59,8 +62,6 @@ export class WorksComponent implements OnInit {
             type: 'Art Direction',
             name: 'Molly The Kid',
             projectDescription: 'Design | Art Direction',
-            projectLink: 'https://pokemon-black-sable.vercel.app/',
-            repositoryLink: '',
             backgroundColor: 'bg-lime-400',
             fontColor: 'text-orange-200',
           },
@@ -68,8 +69,6 @@ export class WorksComponent implements OnInit {
             type: 'DSGN',
             name: 'Cube Editorial',
             projectDescription: 'Editorial',
-            projectLink: '',
-            repositoryLink: '',
             backgroundColor: 'bg-orange-500',
             fontColor: 'text-fuchsia-200',
           },
@@ -77,8 +76,6 @@ export class WorksComponent implements OnInit {
             type: 'DSGN',
             name: 'Sanofi Toujeo',
             projectDescription: 'Graphic Design | Editorial',
-            projectLink: '',
-            repositoryLink: '',
             backgroundColor: 'bg-red-600',
             fontColor: 'text-lime-200',
           },
@@ -86,8 +83,6 @@ export class WorksComponent implements OnInit {
             type: 'DSGN',
             name: 'OA Forum',
             projectDescription: 'Graphic Design',
-            projectLink: '',
-            repositoryLink: '',
             backgroundColor: 'bg-yellow-400',
             fontColor: 'text-orange-200',
           },
@@ -95,33 +90,35 @@ export class WorksComponent implements OnInit {
             type: 'DSGN',
             name: 'Juntos 2015',
             projectDescription: 'Graphic Design | Logotype Design',
-            projectLink: '',
-            repositoryLink: '',
             backgroundColor: 'bg-emerald-500',
             fontColor: 'text-red-100',
           },
-        ],
+        ] as Project[],
       },
     ],
   };
 
+  displayedProjects: Project[] = [];
   hoveredIndex: boolean[] = [];
   isMobileView: boolean = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    private router: Router // Inject Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.hoveredIndex = this.projects.data[0].list.map(() => false);
+    const allProjects: Project[] = this.projects.data[0].list;
+
+    this.displayedProjects = this.maxProjects
+      ? allProjects.slice(0, this.maxProjects)
+      : [...allProjects];
+
+    this.hoveredIndex = this.displayedProjects.map(() => false);
 
     if (isPlatformBrowser(this.platformId)) {
-      this.isMobileView = window.innerWidth < 500; // Detect mobile view
-    }
+      this.isMobileView = window.innerWidth < 500;
 
-    // Scroll to top on route navigation
-    if (isPlatformBrowser(this.platformId)) {
       this.router.events
         .pipe(filter((event) => event instanceof NavigationEnd))
         .subscribe(() => {
