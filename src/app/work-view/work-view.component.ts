@@ -28,12 +28,6 @@ export class WorkViewComponent implements OnInit {
               '../../assets/full-project-imgs/unika/projectUnika-8.png',
               '../../assets/full-project-imgs/unika/projectUnika-9.png',
             ],
-            fullImageUrl07:
-              '../../assets/full-project-imgs/unika/projectUnika-7.png',
-            fullImageUrl08:
-              '../../assets/full-project-imgs/unika/projectUnika-8.png',
-            fullImageUrl09:
-              '../../assets/full-project-imgs/unika/projectUnika-9.png',
             projectLink: 'https://unikahr.vercel.app/',
             projectDescription: 'UX | Frontend',
             repositoryLink: '',
@@ -45,6 +39,31 @@ export class WorkViewComponent implements OnInit {
               'In alignment with Unika HR brand, which emphasizes people, transformation, and professional growth, we crafted brand elements and seamlessly integrated a refreshed look and feel into the corporate website.',
             backgroundColor: 'bg-purple-800',
             fontColor: 'text-purple-200',
+          },
+          {
+            type: 'WEB DVLP',
+            name: 'Camm & Hooper',
+            year: '2023',
+            imageUrl: '../../assets/banner-projects/banner-c&m.png',
+            fullImageUrls: [
+              '../../assets/full-project-imgs/camm-hooper/c_m-1.png',
+              '../../assets/full-project-imgs/camm-hooper/c_m-2.png',
+              '../../assets/full-project-imgs/camm-hooper/c_m-3.png',
+              '../../assets/full-project-imgs/camm-hooper/c_m-4.png',
+              '../../assets/full-project-imgs/camm-hooper/c_m-5.png',
+            ],
+
+            projectDescription: 'UX | Frontend | Backend',
+            projectLink: '',
+            repositoryLink: '',
+            projectAbout:
+              'Unika HR is a performance HR entreperneur based in London. The company has been active in the britanic market since 2016 and is an official Premier Partner of Camm & Hooper.',
+            projectChallengue:
+              'As a Designer and Developer, I was assigned the task of updating their visual identity and build their entire website',
+            projectSolution:
+              'In alignment with Unika HR brand, which emphasizes people, transformation, and professional growth, we crafted brand elements and seamlessly integrated a refreshed look and feel into the corporate website.',
+            backgroundColor: 'bg-yellow-500',
+            fontColor: 'text-lime-200',
           },
           {
             type: 'WEB DVLP',
@@ -97,6 +116,29 @@ export class WorkViewComponent implements OnInit {
             fontColor: 'text-orange-200',
           },
           {
+            type: 'Art Direction',
+            name: 'Molly The Kid',
+            year: '2021',
+            imageUrl: '../../assets/banner-projects/banner-molly.png',
+            fullImageUrls: [
+              '../../assets/full-project-imgs/cubeProjects/cubeProject-01.png',
+              '../../assets/full-project-imgs/cubeProjects/cubeProject-02.png',
+              '../../assets/full-project-imgs/cubeProjects/cubeProject-03.png',
+              '../../assets/full-project-imgs/cubeProjects/cubeProject-04.png',
+            ],
+            projectDescription: 'Design | Art Direction',
+            projectLink: '',
+            repositoryLink: '',
+            projectAbout:
+              'Unika HR is a performance HR entreperneur based in London. The company has been active in the britanic market since 2016 and is an official Premier Partner of Camm & Hooper.',
+            projectChallengue:
+              'As a Designer and Developer, I was assigned the task of updating their visual identity and build their entire website',
+            projectSolution:
+              'In alignment with Unika HR brand, which emphasizes people, transformation, and professional growth, we crafted brand elements and seamlessly integrated a refreshed look and feel into the corporate website.',
+            backgroundColor: 'bg-fuchsia-900',
+            fontColor: 'text-fuchsia-200',
+          },
+          {
             type: 'DSGN',
             name: 'Cube Editorial',
             year: '2024',
@@ -121,10 +163,44 @@ export class WorkViewComponent implements OnInit {
           },
           {
             type: 'DSGN',
+            name: 'Sanofi Toujeo',
+            year: '2017',
+            imageUrl: '../../assets/banner-projects/banner-sanofiToujeo.png',
+            projectDescription: 'Graphic Design | Editorial',
+            projectLink: '',
+            repositoryLink: '',
+            projectAbout:
+              'Unika HR is a performance HR entreperneur based in London. The company has been active in the britanic market since 2016 and is an official Premier Partner of Camm & Hooper.',
+            projectChallengue:
+              'As a Designer and Developer, I was assigned the task of updating their visual identity and build their entire website',
+            projectSolution:
+              'In alignment with Unika HR brand, which emphasizes people, transformation, and professional growth, we crafted brand elements and seamlessly integrated a refreshed look and feel into the corporate website.',
+            backgroundColor: 'bg-red-500',
+            fontColor: 'text-red-100',
+          },
+          {
+            type: 'DSGN',
             name: 'OA Forum',
-            year: '2024',
+            year: '2016',
             imageUrl: '../../assets/banner-projects/banner-oa-forum.png',
             projectDescription: 'Graphic Design',
+            projectLink: '',
+            repositoryLink: '',
+            projectAbout:
+              'Unika HR is a performance HR entreperneur based in London. The company has been active in the britanic market since 2016 and is an official Premier Partner of Camm & Hooper.',
+            projectChallengue:
+              'As a Designer and Developer, I was assigned the task of updating their visual identity and build their entire website',
+            projectSolution:
+              'In alignment with Unika HR brand, which emphasizes people, transformation, and professional growth, we crafted brand elements and seamlessly integrated a refreshed look and feel into the corporate website.',
+            backgroundColor: 'bg-red-500',
+            fontColor: 'text-red-100',
+          },
+          {
+            type: 'DSGN',
+            name: 'Juntos Biocirugia',
+            year: '2015',
+            imageUrl: '../../assets/banner-projects/banner-Juntos.png',
+            projectDescription: 'Graphic Design | Logotype Design',
             projectLink: '',
             repositoryLink: '',
             projectAbout:
