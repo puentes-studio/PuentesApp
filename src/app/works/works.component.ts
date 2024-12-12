@@ -6,6 +6,8 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router'; // Import Router and NavigationEnd
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-works',
@@ -23,7 +25,7 @@ export class WorksComponent implements OnInit {
             projectLink: 'https://unikahr.vercel.app/',
             projectDescription: 'UX | Frontend',
             repositoryLink: '',
-            backgroundColor: 'bg-purple-800',
+            backgroundColor: 'bg-rose-600',
             fontColor: 'text-purple-200',
           },
           {
@@ -32,8 +34,8 @@ export class WorksComponent implements OnInit {
             projectLink: '',
             projectDescription: 'UX | Frontend',
             repositoryLink: '',
-            backgroundColor: 'bg-purple-800',
-            fontColor: 'text-purple-200',
+            backgroundColor: 'bg-fuchsia-500',
+            fontColor: 'text-lime-200',
           },
           {
             type: 'WEB DVLP',
@@ -41,7 +43,7 @@ export class WorksComponent implements OnInit {
             projectDescription: 'UX | Frontend | Backend',
             projectLink: '',
             repositoryLink: '',
-            backgroundColor: 'bg-yellow-500',
+            backgroundColor: 'bg-blue-600',
             fontColor: 'text-lime-200',
           },
           {
@@ -50,7 +52,7 @@ export class WorksComponent implements OnInit {
             projectDescription: 'UX | Frontend | Backend',
             projectLink: 'https://pokemon-black-sable.vercel.app/',
             repositoryLink: 'https://github.com/puentes-studio/PokemonBlack',
-            backgroundColor: 'bg-orange-700',
+            backgroundColor: 'bg-teal-400',
             fontColor: 'text-orange-200',
           },
           {
@@ -59,7 +61,7 @@ export class WorksComponent implements OnInit {
             projectDescription: 'Design | Art Direction',
             projectLink: 'https://pokemon-black-sable.vercel.app/',
             repositoryLink: '',
-            backgroundColor: 'bg-orange-700',
+            backgroundColor: 'bg-lime-400',
             fontColor: 'text-orange-200',
           },
           {
@@ -68,7 +70,7 @@ export class WorksComponent implements OnInit {
             projectDescription: 'Editorial',
             projectLink: '',
             repositoryLink: '',
-            backgroundColor: 'bg-fuchsia-900',
+            backgroundColor: 'bg-orange-500',
             fontColor: 'text-fuchsia-200',
           },
           {
@@ -77,8 +79,8 @@ export class WorksComponent implements OnInit {
             projectDescription: 'Graphic Design | Editorial',
             projectLink: '',
             repositoryLink: '',
-            backgroundColor: 'bg-red-500',
-            fontColor: 'text-red-100',
+            backgroundColor: 'bg-red-600',
+            fontColor: 'text-lime-200',
           },
           {
             type: 'DSGN',
@@ -86,8 +88,8 @@ export class WorksComponent implements OnInit {
             projectDescription: 'Graphic Design',
             projectLink: '',
             repositoryLink: '',
-            backgroundColor: 'bg-red-500',
-            fontColor: 'text-red-100',
+            backgroundColor: 'bg-yellow-400',
+            fontColor: 'text-orange-200',
           },
           {
             type: 'DSGN',
@@ -95,7 +97,7 @@ export class WorksComponent implements OnInit {
             projectDescription: 'Graphic Design | Logotype Design',
             projectLink: '',
             repositoryLink: '',
-            backgroundColor: 'bg-red-500',
+            backgroundColor: 'bg-emerald-500',
             fontColor: 'text-red-100',
           },
         ],
@@ -106,13 +108,25 @@ export class WorksComponent implements OnInit {
   hoveredIndex: boolean[] = [];
   isMobileView: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+    private router: Router // Inject Router
+  ) {}
 
   ngOnInit(): void {
     this.hoveredIndex = this.projects.data[0].list.map(() => false);
 
     if (isPlatformBrowser(this.platformId)) {
       this.isMobileView = window.innerWidth < 500; // Detect mobile view
+    }
+
+    // Scroll to top on route navigation
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
   }
 
