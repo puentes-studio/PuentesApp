@@ -109,6 +109,7 @@ export class WorksComponent implements OnInit {
 
   ngOnInit(): void {
     const allProjects: Project[] = this.projects.data[0].list;
+    console.log('maxProjects:', this.maxProjects);
 
     this.displayedProjects = this.maxProjects
       ? allProjects.slice(0, this.maxProjects)

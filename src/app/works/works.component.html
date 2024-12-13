@@ -14,7 +14,7 @@
     <li *ngFor="let project of projects.data">
       <ul class="flex flex-col">
         <li
-          *ngFor="let item of project.list; let i = index"
+          *ngFor="let item of displayedProjects; let i = index"
           [attr.data-index]="i"
           class="project-container flex flex-row h-16 justify-between items-center"
           [ngClass]="[item.backgroundColor, item.fontColor]"
@@ -42,18 +42,18 @@
               </div>
             </div>
           </div>
-          <div
+          <!-- <div
             class="links-container absolute right-2 md:right-6 flex text-center backdrop-blur-sm"
           >
-            <!-- <a
+            <a
               class="project-website bg-black opacity-45 text-4xl rounded-full px-4"
               target="_blank"
               [href]="item.projectLink"
               rel="noopener noreferrer"
             >
               See
-            </a> -->
-          </div>
+            </a>
+          </div> -->
         </li>
       </ul>
     </li>
