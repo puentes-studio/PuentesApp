@@ -39,10 +39,10 @@ export class WorksComponent implements OnInit {
           },
           {
             type: 'WEB DVLP',
-            name: 'Camm & Hopper',
+            name: 'Puentes Studio',
             projectDescription: 'UX | Frontend',
-            backgroundColor: 'bg-fuchsia-500',
-            fontColor: 'text-lime-200',
+            backgroundColor: 'bg-orange-300',
+            fontColor: 'text-lime-400',
           },
           {
             type: 'WEB DVLP',
@@ -53,10 +53,17 @@ export class WorksComponent implements OnInit {
           },
           {
             type: 'WEB DVLP',
+            name: 'Camm & Hopper',
+            projectDescription: 'UX | Frontend',
+            backgroundColor: 'bg-fuchsia-500',
+            fontColor: 'text-lime-100',
+          },
+          {
+            type: 'WEB DVLP',
             name: 'Pokemon Desk',
             projectDescription: 'UX | Frontend | Backend',
             backgroundColor: 'bg-teal-400',
-            fontColor: 'text-orange-200',
+            fontColor: 'text-orange-300',
           },
           {
             type: 'Art Direction',
@@ -74,8 +81,8 @@ export class WorksComponent implements OnInit {
           },
           {
             type: 'DSGN',
-            name: 'Sanofi Toujeo',
-            projectDescription: 'Graphic Design | Editorial',
+            name: 'Buen Corazon',
+            projectDescription: 'Graphic Design',
             backgroundColor: 'bg-red-600',
             fontColor: 'text-lime-200',
           },
