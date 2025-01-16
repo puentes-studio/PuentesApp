@@ -2,9 +2,15 @@
   font-family: "Big Shoulders Display", sans-serif;
 }
 
+.abril-font {
+  font-family: "Abril Fatface", serif;
+}
 .name-title {
   font-family: "Abril Fatface", serif;
   /* font-family: "Big Shoulders Display", sans-serif; */
+}
+.poppins-font {
+  font-family: "Poppins", sans-serif;
 }
 
 p {

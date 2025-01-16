@@ -1,39 +1,96 @@
 <div
-  class="about-container flex flex-col items-center pt-6 sm:pt-0 md:px-24 lg:flex-row w-full h-fit md:min-h-lvh bg-black md:bg-gradient-to-tr from-zinc-950 to-black"
+  class="mt-20 flex flex-col pt-6 sm:pt-0 w-full h-fit md:min-h-lvh bg-black md:bg-gradient-to-tr from-zinc-950 to-black"
 >
-  <div class="divider" role="separator" aria-label="Divider"></div>
-  <!--  Left Side -->
-  <div class="flex flex-col items-end md:w-2/3">
-    <div class="flex flex-col items-end mr-8 md:mr-16">
-      <h2
-        class="hello-title text-green-400 line-through text-8xl font-medium md:text-9xl tracking-tight mr-3 hover:no-underline hover:italic hover:text-yellow-300"
-      >
-        I AM VLAD
-      </h2>
-      <h4 class="name-title text-stone-400 text-sm -mt-1 md:-mt-2">
-        Vlad Beltran Puentes
-      </h4>
+  <div class="flex mt-7 justify-center">
+    <div class="flex flex-col px-10 items-start">
+      <div class="flex">
+        <h2
+          class="poppins-font text-xs text-yellow-100 md:text-sm leading-tight italic"
+        >
+          *Specializing in graphic design, <br />
+          websites, app & visuals*
+        </h2>
+      </div>
+      <div class="flex flex-col">
+        <h1
+          class="abril-font text-white font-semibold text-6xl md:text-9xl tracking-normal -mt-1 md:-mt-4"
+        >
+          Experiences
+        </h1>
+        <h2
+          class="abril-font text-white text-end text-3xl -mt-1 md:-mt-3 italic md:text-5xl tracking-normal"
+        >
+          designer
+        </h2>
+      </div>
     </div>
-
-    <p
-      class="text-neutral-200 text-lg tracking-tight px-9 leading-6 sm:mr-8 md:text-3xl mt-6 sm:mt-14 hover:bg-white hover:text-white"
-    >
-      I use my passion and skills to build digital products and experiences.
-      National and international customers rely on me for design,
-      implementation, and management of their products. I have worked also with
-      studios, companies, startups and individuals to create a blueprint for
-      their business.
-    </p>
   </div>
 
-  <div class="flex mt-16 items-center">
+  <div class="flex mt-16 items-end md:hidden">
     <img
       #aboutImg
-      src="assets/img/dev-img02.png"
-      (mouseover)="changeImage('assets/img/dev-img01.png')"
+      src="assets/img/about-dev-img.png"
+      (mouseover)="changeImage('assets/img/about-dev-img.png')"
       (mouseout)="resetImage()"
-      class="about-img border-8 border-lime-300 hover:border-violet-600 hover:border-double cursor-progress max-h-img min-h-60 mb-7 md:ml-8 rounded-full"
+      class="md:w-11/12"
       alt="About me Developer, Frontend developer, Designer"
     />
   </div>
+
+  <div class="flex items-center">
+    <div class="flex flex-col md:items-end items-center md:w-2/3">
+      <div class="flex flex-col items-end mr-8 md:mr-16">
+        <!-- <h2
+          class=" text-green-400 line-through text-8xl font-medium md:text-9xl tracking-tight mr-3 hover:no-underline hover:italic hover:text-yellow-300"
+        >
+          I AM VLAD
+        </h2> -->
+        <h4
+          class="hello-title text-green-400 md:text-7xl text-5xl tracking-tight hover:bg-yellow-300 hover:text-black"
+        >
+          Vlad Beltran Puentes
+        </h4>
+      </div>
+
+      <p
+        class="text-neutral-200 text-sm tracking-tight px-9 leading-6 sm:mr-8 mt-6 sm:mt-14"
+      >
+        I am a Graphic Designer & Frontend Developer, expanding my expertise in
+        JavaScript frameworks. While my experience in frontend development spans
+        less than 3 years, my analytical mindset, problem-solving skills, and
+        mastery of CSS provide a strong foundation for building scalable and
+        user-friendly applications.
+      </p>
+      <p
+        class="text-neutral-200 text-sm tracking-tight px-9 leading-6 sm:mr-8 mt-6"
+      >
+        I am proficient in React, TypeScript, Angular and MySQL databases, with
+        a commitment to adopting best practices within the frameworks I work
+        with. My technical knowledge is complemented by my experience in design,
+        enabling me to craft visually compelling and intuitive interfaces that
+        elevate user experiences.
+      </p>
+      <p
+        class="text-neutral-200 text-sm tracking-tight px-9 leading-6 sm:mr-8 mt-6"
+      >
+        As a graphic designer and video editor, I bring a creative perspective
+        to development projects, underpinned by Adobe Creative Suite mastery. My
+        strengths in teamwork, communication, and a goal-oriented mindset ensure
+        that I collaborate effectively and stay focused on delivering impactful
+        solutions.
+      </p>
+    </div>
+
+    <div class="flex mt-16 items-end hidden md:flex">
+      <img
+        #aboutImg
+        src="assets/img/about-dev-img.png"
+        (mouseover)="changeImage('assets/img/about-dev-img.png')"
+        (mouseout)="resetImage()"
+        class="md:w-11/12"
+        alt="About me Developer, Frontend developer, Designer"
+      />
+    </div>
+  </div>
+  <!--  Left Side -->
 </div>
