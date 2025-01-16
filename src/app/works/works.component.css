@@ -51,6 +51,7 @@
   height: 1px;
   width: 100%;
   background: var(--red-to-pink-to-purple-horizontal-gradient);
+  margin-block: 1.5rem;
 }
 
 .project-container {
@@ -80,20 +81,9 @@
   .text-10xl {
     font-size: 10rem;
   }
-  .divider {
-    width: 2px;
-    background: white;
-    margin-inline: 0.5rem;
-  }
 }
 
 @media screen and (max-width: 650px) {
-  .divider {
-    height: 1px;
-    width: 100%;
-    background: var(--red-to-pink-to-purple-horizontal-gradient);
-    margin-block: 1.5rem;
-  }
   .project-description {
     overflow-x: hidden;
     white-space: nowrap;
