@@ -21,6 +21,10 @@ p {
   max-height: 400px;
 }
 
+.divider {
+  height: 1px;
+}
+
 @media (min-width: 768px) {
   .min-h-img {
     height: 320px;

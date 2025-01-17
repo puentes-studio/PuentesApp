@@ -1,6 +1,7 @@
 <div
   class="mt-20 flex flex-col pt-6 sm:pt-0 w-full h-fit md:min-h-lvh bg-black md:bg-gradient-to-tr from-zinc-950 to-black"
 >
+  <!-- header -->
   <div class="flex mt-7 justify-center">
     <div class="flex flex-col px-10 items-start">
       <div class="flex">
@@ -26,6 +27,7 @@
     </div>
   </div>
 
+  <!-- mobile img -->
   <div class="flex mt-16 items-end md:hidden">
     <img
       #aboutImg
@@ -37,8 +39,16 @@
     />
   </div>
 
-  <div class="flex">
-    <div class="flex flex-col pt-12 py-3">
+  <!-- separator -->
+  <div
+    class="divider w-2/3 bg-lime-400 md:mt-7"
+    role="separator"
+    aria-label="Divider"
+  ></div>
+
+  <!-- about me -->
+  <div class="flex md:mt-16 mt-9">
+    <div class="flex flex-col md:pt-12 pt-7 py-3">
       <div class="flex flex-col items-center">
         <!-- <h2
           class=" text-green-400 line-through text-8xl font-medium md:text-9xl tracking-tight mr-3 hover:no-underline hover:italic hover:text-yellow-300"
@@ -46,15 +56,15 @@
           I AM VLAD
         </h2> -->
         <h4
-          class="hello-title text-green-400 md:text-7xl text-5xl tracking-tight hover:bg-yellow-300 hover:text-black"
+          class="hello-title text-green-400 md:text-8xl text-5xl tracking-tight hover:bg-yellow-300 hover:text-black"
         >
           Vlad Beltran Puentes
         </h4>
       </div>
-      <div class="flex flex-col md:flex-row">
-        <div class="flex flex-col items-center md:w-2/3">
+      <div class="flex flex-col md:flex-row justify-center md:mt-12 mt-6">
+        <div class="flex flex-col items-center md:w-1/2">
           <p
-            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 sm:mr-8 mt-6 sm:mt-14 text-center"
+            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 md:mt-0 mt-6 sm:mt-14 text-center md:text-right"
           >
             I am a
             <span class="text-yellow-200"
@@ -71,7 +81,7 @@
             applications.
           </p>
           <p
-            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 sm:mr-8 mt-6 text-center"
+            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 mt-6 text-center md:text-right"
           >
             Proficient in
             <span class="text-yellow-200 italic"
@@ -84,7 +94,7 @@
             experiences.
           </p>
           <p
-            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 sm:mr-8 mt-6 text-center"
+            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 mt-6 text-center md:text-right"
           >
             As a graphic designer, I bring a creative perspective to development
             projects, underpinned by
@@ -96,13 +106,141 @@
           </p>
         </div>
 
-        <div class="flex items-end hidden md:flex">
+        <div class="flex hidden md:flex">
           <img
             #aboutImg
             src="assets/img/about-dev-img.png"
             (mouseover)="changeImage('assets/img/about-dev-img.png')"
             (mouseout)="resetImage()"
-            class="md:w-2/5"
+            class="md:min-w-64 md:max-w-72 h-fit"
+            alt="About me Developer, Frontend developer, Designer"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- certificates -->
+  <div class="flex mt-16 justify-center">
+    <div class="flex flex-col pt-12 py-3">
+      <div class="flex flex-col md:flex-row justify-center items-center mt-12">
+        <div class="flex flex-col px-10">
+          <div class="flex flex-col">
+            <h2
+              class="abril-font text-white font-semibold text-5xl md:text-9xl tracking-normal -mt-1 md:-mt-2"
+            >
+              Create goals,
+            </h2>
+            <h2
+              class="abril-font text-white ml-10 font-semibold text-4xl md:text-8xl tracking-normal md:-mt-2"
+            >
+              be positive
+            </h2>
+            <h2
+              class="abril-font text-white text-end text-2xl -mt-1 md:-mt-2 italic md:text-5xl tracking-normal"
+            >
+              and you can reach'em all'
+            </h2>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h2
+              class="poppins-font text-xs text-yellow-100 md:text-sm leading-tight italic mt-7 text-center md:mt-2 md:text-left"
+            >
+              I AM MULTIDISCIPLINARY INDIVIDUAL WITH <br />
+              STRONG PASSION TO TRANSFORM PROBLEMS <br />INTO BASIC AND
+              INTUITIVE SOLUTIONS
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex hidden md:flex">
+          <img
+            #aboutImg
+            src="assets/img/about-dev-img.png"
+            (mouseover)="changeImage('assets/img/about-dev-img.png')"
+            (mouseout)="resetImage()"
+            class="md:min-w-64 md:max-w-72 h-fit"
+            alt="About me Developer, Frontend developer, Designer"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- separator -->
+  <div
+    class="divider w-full bg-emerald-900 md:mt-7"
+    role="separator"
+    aria-label="Divider"
+  ></div>
+
+  <!-- skills -->
+  <div class="flex mt-16">
+    <div class="flex flex-col pt-12 py-3">
+      <div class="flex flex-col items-center">
+        <!-- <h2
+          class=" text-green-400 line-through text-8xl font-medium md:text-9xl tracking-tight mr-3 hover:no-underline hover:italic hover:text-yellow-300"
+        >
+          I AM VLAD
+        </h2> -->
+        <h4
+          class="hello-title text-green-400 md:text-8xl text-5xl tracking-tight hover:bg-yellow-300 hover:text-black"
+        >
+          Vlad Beltran Puentes
+        </h4>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center mt-12">
+        <div class="flex flex-col items-center md:w-1/2">
+          <p
+            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 md:mt-0 mt-6 sm:mt-14 text-center md:text-right"
+          >
+            I am a
+            <span class="text-yellow-200"
+              >Graphic Designer & Frontend Developer,</span
+            >
+            expanding my expertise in
+            <span class="italic">JavaScript</span> frameworks. My experience in
+            frontend development spans less than 3 years,
+            <span class="italic"
+              >analytical mindset, problem-solving skills, and mastery of
+              CSS</span
+            >
+            provide a strong foundation for building scalable and user-friendly
+            applications.
+          </p>
+          <p
+            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 mt-6 text-center md:text-right"
+          >
+            Proficient in
+            <span class="text-yellow-200 italic"
+              >React, TypeScript, Angular and MySQL</span
+            >
+            databases, with a commitment to learn and adopt best practices
+            within the frameworks I work with. Technical knowledge is
+            complemented by my experience in design, enabling me to craft
+            visually compelling and intuitive interfaces that elevate user
+            experiences.
+          </p>
+          <p
+            class="text-neutral-200 text-sm tracking-tight px-9 leading-6 mt-6 text-center md:text-right"
+          >
+            As a graphic designer, I bring a creative perspective to development
+            projects, underpinned by
+            <span class="text-yellow-200 italic"
+              >Adobe Creative Suite mastery</span
+            >. My strengths in teamwork, communication, and a goal-oriented
+            mindset ensure that I collaborate effectively and stay focused on
+            delivering impactful solutions.
+          </p>
+        </div>
+
+        <div class="flex hidden md:flex">
+          <img
+            #aboutImg
+            src="assets/img/about-dev-img.png"
+            (mouseover)="changeImage('assets/img/about-dev-img.png')"
+            (mouseout)="resetImage()"
+            class="md:min-w-64 md:max-w-72 h-fit"
             alt="About me Developer, Frontend developer, Designer"
           />
         </div>
