@@ -53,7 +53,7 @@ export class WorksComponent implements OnInit {
           },
           {
             type: 'WEB DVLP',
-            name: 'Camm & Hopper',
+            name: 'Camm & Hooper',
             projectDescription: 'UX | Frontend',
             backgroundColor: 'bg-fuchsia-500',
             fontColor: 'text-lime-100',
