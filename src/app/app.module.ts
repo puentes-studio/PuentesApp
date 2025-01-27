@@ -16,9 +16,10 @@ import { WorksComponent } from './works/works.component';
 import { WorkViewComponent } from './work-view/work-view.component';
 import { WorksPageComponent } from './works-page/works-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, HeroComponent, AboutMeComponent, WorksComponent, WorkViewComponent, WorksPageComponent, AboutPageComponent],
+  declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, HeroComponent, AboutMeComponent, WorksComponent, WorkViewComponent, WorksPageComponent, AboutPageComponent, CarouselComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
