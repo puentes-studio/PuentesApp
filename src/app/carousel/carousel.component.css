@@ -1,37 +1,44 @@
-/* embla-carousel.css or styles you may use to customize */
-@import "embla-carousel/embla.min.css";
-
-.embla {
-  max-width: 48rem;
+.carousel {
+  position: relative;
   margin: auto;
-  --slide-height: 19rem;
-  --slide-spacing: 1rem;
-  --slide-size: 100%;
+  overflow: hidden; /* Hide overflow for the carousel */
 }
-.embla__viewport {
-  overflow: hidden;
+
+.carousel__viewport {
+  overflow: hidden; /* Hide overflow in the viewport */
+  height: 450px; /* Set a fixed height for the carousel */
 }
-.embla__container {
+
+.carousel__container {
   display: flex;
-  touch-action: pan-x pinch-zoom;
-  margin-top: calc(var(--slide-spacing) * -1);
-  height: calc(var(--slide-spacing) + var(--slide-height));
-  flex-direction: column;
+  flex-direction: column; /* Ensure that items stack vertically */
+  transition: transform 1s ease-in-out; /* Smooth transition for vertical movement */
 }
-.embla__slide {
-  transform: translate3d(0, 0, 0);
-  flex: 0 0 var(--slide-size);
-  min-height: 0;
-  padding-top: var(--slide-spacing);
-}
-.embla__slide__number {
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  border-radius: 1.8rem;
-  font-size: 4rem;
-  font-weight: 600;
+
+.carousel__slide {
+  list-style: none;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
-  user-select: none;
+  align-items: center;
+  height: 100%; /* Make each slide take full height */
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+/* Add specific styles for the prev/next buttons */
+.buttons.prev {
+  left: 10px;
+}
+
+.buttons.next {
+  right: 10px;
 }
