@@ -153,15 +153,8 @@
           </div>
         </div>
 
-        <div class="flex hidden md:flex">
-          <img
-            #aboutImg
-            src="assets/img/about-dev-img.png"
-            (mouseover)="changeImage('assets/img/about-dev-img.png')"
-            (mouseout)="resetImage()"
-            class="md:min-w-64 md:max-w-72 h-fit"
-            alt="About me Developer, Frontend developer, Designer"
-          />
+        <div class="flex">
+          <app-carousel />
         </div>
       </div>
     </div>
