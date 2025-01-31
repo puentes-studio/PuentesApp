@@ -1,49 +1,70 @@
 <div class="flex flex-col">
   <div>
-    <div class="flex px-10">
-      <ul class="grid grid-cols-5 gap-5">
-        <li
-          *ngFor="let item of skills.software; let i = index"
-          [attr.data-index]="i"
-        >
-          <h2
-            class="poppins-font text-white bg-slate-900 text-xxs w-24 md:w-40 p-4 flex justify-center border-green-300 border rounded-full"
+    <div class="flex flex-col items-center">
+      <h2
+        class="poppins-font font-extralight text-slate-300 text-3xl text-center p-2"
+      >
+        Software
+      </h2>
+      <div class="flex px-10">
+        <ul class="grid grid-cols-3 gap-5">
+          <li
+            *ngFor="let item of skills.software; let i = index"
+            [attr.data-index]="i"
           >
-            {{ item.name }}
-          </h2>
-        </li>
-      </ul>
+            <h2
+              class="poppins-font font-light text-yellow-100 bg-slate-900 text-xxs w-24 md:w-28 h-12 p-3 flex text-center items-center justify-center leading-3 border-green-300 border rounded-full"
+            >
+              {{ item.name }}
+            </h2>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div class="flex flex-col">
-    <div class="flex flex-col px-10">
-      <ul class="grid grid-cols-5 gap-5">
-        <li
-          *ngFor="let item of skills.hard; let i = index"
-          [attr.data-index]="i"
-        >
-          <h2
-            class="poppins-font text-white bg-slate-900 text-xxs w-24 md:w-40 p-4 flex justify-center border-green-300 border rounded-full"
+  <div class="flex flex-col md:flex-row mt-10 md:mt-11">
+    <div class="flex flex-col items-center">
+      <h2
+        class="poppins-font font-extralight text-slate-300 text-3xl text-center p-2"
+      >
+        Hard
+      </h2>
+      <div class="flex flex-col px-10">
+        <ul class="grid grid-cols-3 gap-5">
+          <li
+            *ngFor="let item of skills.hard; let i = index"
+            [attr.data-index]="i"
           >
-            {{ item.name }}
-          </h2>
-        </li>
-      </ul>
+            <h2
+              class="poppins-font font-light text-yellow-100 bg-slate-900 text-xxs w-24 md:w-28 h-12 p-3 flex text-center items-center justify-center leading-3 border-green-300 border rounded-full"
+            >
+              {{ item.name }}
+            </h2>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="flex flex-col px-10">
-      <ul class="grid grid-cols-5 gap-5">
-        <li
-          *ngFor="let item of skills.soft; let i = index"
-          [attr.data-index]="i"
-        >
-          <h2
-            class="poppins-font text-white bg-slate-900 text-xxs w-24 md:w-40 p-4 flex justify-center border-green-300 border rounded-full"
+    <div class="flex flex-col items-center md:mt-0 mt-10">
+      <h2
+        class="poppins-font font-extralight text-slate-300 text-3xl text-center p-2"
+      >
+        Soft
+      </h2>
+      <div class="flex flex-col px-10">
+        <ul class="grid grid-cols-3 gap-5">
+          <li
+            *ngFor="let item of skills.soft; let i = index"
+            [attr.data-index]="i"
           >
-            {{ item.name }}
-          </h2>
-        </li>
-      </ul>
+            <h2
+              class="poppins-font font-light text-yellow-100 bg-slate-900 text-xxs w-24 md:w-28 h-12 p-3 flex text-center items-center justify-center leading-3 border-green-300 border rounded-full"
+            >
+              {{ item.name }}
+            </h2>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
