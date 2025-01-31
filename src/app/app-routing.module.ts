@@ -5,6 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { WorkViewComponent } from './work-view/work-view.component';
 import { WorksPageComponent } from './works-page/works-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
     component: WorksPageComponent,
   },
   { path: 'about-page', component: AboutPageComponent },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
 ];
 
 @NgModule({

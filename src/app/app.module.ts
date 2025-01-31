@@ -18,10 +18,26 @@ import { WorksPageComponent } from './works-page/works-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SkillBubblesComponent } from './skill-bubbles/skill-bubbles.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, HeroComponent, AboutMeComponent, WorksComponent, WorkViewComponent, WorksPageComponent, AboutPageComponent, CarouselComponent, SkillBubblesComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    HeroComponent,
+    AboutMeComponent,
+    WorksComponent,
+    WorkViewComponent,
+    WorksPageComponent,
+    AboutPageComponent,
+    CarouselComponent,
+    SkillBubblesComponent,
+    ContactComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
