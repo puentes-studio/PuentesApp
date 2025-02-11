@@ -30,6 +30,10 @@
   display: none;
 }
 
+.abril-font {
+  font-family: "Abril Fatface", serif;
+}
+
 .works-title {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 8em;
