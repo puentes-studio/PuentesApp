@@ -5,11 +5,6 @@
   --vivid-pink: oklch(69.02% 0.277 332.77);
   --hot-red: oklch(61.42% 0.238 15.34);
   --orange-red: oklch(63.32% 0.24 31.68);
-
-  --gray-900: oklch(19.37% 0.006 300.98);
-  --gray-700: oklch(36.98% 0.014 302.71);
-  --gray-400: oklch(70.9% 0.015 304.04);
-
   --red-to-pink-to-purple-vertical-gradient: linear-gradient(
     180deg,
     var(--orange-red) 0%,
@@ -23,8 +18,6 @@
     var(--vivid-pink) 50%,
     var(--electric-violet) 100%
   );
-
-  --pill-accent: var(--bright-blue);
 
   --linear-rainbow: linear-gradient(
     to right,
@@ -51,6 +44,7 @@
 
 .main {
   animation: spawn 2s ease-in-out forwards;
+  height: 90vh;
 }
 
 .main:before {
@@ -75,11 +69,27 @@
   z-index: 3;
 }
 
-.frontEnd-title {
+.animate-marquee {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-name: marquee-content;
+  animation-timing-function: linear;
+}
+
+@keyframes marquee-content {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.abril-font {
   font-family: "Abril Fatface", serif;
 }
 
-.home-title {
+.big-shoulders-font {
   font-family: "Big Shoulders Display", sans-serif;
 }
 
