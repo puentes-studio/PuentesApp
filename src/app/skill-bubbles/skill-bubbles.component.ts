@@ -61,6 +61,9 @@ export class SkillBubblesComponent {
       {
         name: 'Curiosity',
       },
+      {
+        name: 'Comunication',
+      },
     ],
     software: [
       {
