@@ -15,6 +15,22 @@ p {
   max-height: 400px;
 }
 
+.animate-marquee {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-name: marquee-content;
+  animation-timing-function: linear;
+}
+
+@keyframes marquee-content {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 @media (min-width: 768px) {
   .min-h-img {
     height: 320px;
