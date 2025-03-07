@@ -1,20 +1,20 @@
-<div #slider1 class="carousel">
-  <div class="carousel__viewport">
-    <ul class="carousel__container flex flex-col justify-center items-center">
-      <li
-        class="carousel__slide flex items-center justify-center my-2"
-        *ngFor="let item of certificates.list"
-      >
-        <img
-          class="flex items-center justify-center max-w-96 py-4"
-          [src]="item.imageUrl"
-          [alt]="item.name"
-        />
-      </li>
-    </ul>
-  </div>
-  <div>
-    <a class="buttons prev" (click)="prevSlide()">&#60;</a>
-    <a class="buttons next" (click)="nextSlide()">&#62;</a>
-  </div>
+<div>
+  <input type="radio" name="position" checked />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+
+  <ul id="carousel">
+    <li class="item" *ngFor="let item of certificates.list">
+      <img
+        class="flex items-center justify-center max-w-96 py-4"
+        [src]="item.imageUrl"
+        [alt]="item.name"
+      />
+    </li>
+  </ul>
 </div>

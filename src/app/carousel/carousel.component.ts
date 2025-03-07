@@ -17,24 +17,44 @@ export class CarouselComponent implements AfterViewInit {
   certificates = {
     list: [
       {
-        name: 'Taller Cinco Degree',
-        year: '2005',
-        imageUrl: '../../assets/png-cert/Cert_01.png',
+        name: 'Mysql',
+        year: '2024',
+        imageUrl: '../../assets/png-cert/Cert_08.png',
       },
       {
-        name: 'SENA Diploma',
-        year: '2008',
-        imageUrl: '../../assets/png-cert/Cert_02.png',
+        name: 'Javascript Udemy',
+        year: '2024',
+        imageUrl: '../../assets/png-cert/Cert_07.png',
       },
       {
-        name: 'Adobe Creative',
-        year: '2011',
-        imageUrl: '../../assets/png-cert/Cert_03.png',
+        name: 'Fullstack Developer',
+        year: '2024',
+        imageUrl: '../../assets/png-cert/Cert_06.png',
+      },
+      {
+        name: 'Web design certificate',
+        year: '2019',
+        imageUrl: '../../assets/png-cert/Cert_05.png',
       },
       {
         name: 'Yamaha Music School',
         year: '2019',
         imageUrl: '../../assets/png-cert/Cert_04.png',
+      },
+      {
+        name: 'Adobe certificate',
+        year: '2011',
+        imageUrl: '../../assets/png-cert/Cert_03.png',
+      },
+      {
+        name: 'SENA prepress',
+        year: '2011',
+        imageUrl: '../../assets/png-cert/Cert_02.png',
+      },
+      {
+        name: 'Taller 5 diploma Graphic Design',
+        year: '2019',
+        imageUrl: '../../assets/png-cert/Cert_01.png',
       },
     ],
   };
