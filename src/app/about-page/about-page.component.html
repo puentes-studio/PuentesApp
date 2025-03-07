@@ -14,7 +14,7 @@
       </div>
       <div class="flex flex-col">
         <h1
-          class="abril-font text-white font-semibold text-6xl md:text-9xl tracking-normal -mt-1 md:-mt-4"
+          class="abril-font text-white font-semibold text-5xl md:text-9xl tracking-normal -mt-1 md:-mt-4"
         >
           Experiences
         </h1>
@@ -28,20 +28,20 @@
   </div>
 
   <!-- mobile img -->
-  <div class="flex mt-16 items-end md:hidden">
+  <div class="flex mt-16 items-center justify-center md:hidden">
     <img
       #aboutImg
       src="assets/img/about-dev-img.png"
       (mouseover)="changeImage('assets/img/about-dev-img.png')"
       (mouseout)="resetImage()"
-      class="md:w-11/12"
+      class="md:w-10/12 w-10/12"
       alt="About me Developer, Frontend developer, Designer"
     />
   </div>
 
   <!-- separator -->
   <div
-    class="divider w-2/3 bg-lime-400 md:mt-7"
+    class="divider w-2/3 bg-lime-400 md:mt-7 mt-20"
     role="separator"
     aria-label="Divider"
   ></div>
@@ -56,12 +56,14 @@
           I AM VLAD
         </h2> -->
         <h4
-          class="hello-title text-green-400 md:text-8xl text-5xl tracking-tight hover:bg-yellow-300 hover:text-black"
+          class="hello-title md:text-8xl text-5xl tracking-tight bg-yellow-300 text-black hover:bg-black hover:text-yellow-300"
         >
           Vlad Beltran Puentes
         </h4>
       </div>
-      <div class="flex flex-col md:flex-row justify-center md:mt-12 mt-6">
+      <div
+        class="flex flex-col md:flex-row md:items-center justify-center md:mt-12 mt-6"
+      >
         <div class="flex flex-col items-center md:w-1/2">
           <p
             class="text-neutral-200 text-sm tracking-tight px-9 leading-6 md:mt-0 mt-6 sm:mt-14 text-center md:text-right"
@@ -123,33 +125,31 @@
   <!-- certificates -->
   <div class="flex mt-16 justify-center">
     <div class="flex flex-col pt-12 py-3">
-      <div
-        class="flex flex-col md:flex-row justify-center items-center mt-12 gap-11"
-      >
+      <div class="flex flex-col justify-center items-center mt-12 gap-11">
         <div class="flex flex-col px-10">
           <div class="flex flex-col">
             <h2
-              class="abril-font text-white font-semibold text-5xl md:text-8xl tracking-normal -mt-1 md:-mt-1"
+              class="abril-font text-white font-semibold text-5xl text-center md:text-8xl tracking-normal -mt-1 md:mt-1"
             >
               Create goals,
             </h2>
             <h2
-              class="abril-font text-white ml-10 font-semibold text-4xl md:text-8xl tracking-normal md:-mt-1"
+              class="abril-font text-white text-center font-semibold text-4xl md:text-8xl tracking-normal md:mt-1"
             >
               be positive
             </h2>
             <h2
-              class="abril-font text-white text-end text-2xl -mt-1 md:-mt-2 italic md:text-5xl tracking-normal"
+              class="abril-font text-white text-center text-2xl -mt-1 md:mt-1 italic md:text-5xl tracking-normal"
             >
               and you can reach'em all'
             </h2>
           </div>
           <div class="flex flex-col justify-center">
             <h2
-              class="poppins-font text-xxs text-yellow-100 md:text-sm leading-tight italic mt-7 text-center md:mt-2 md:text-left"
+              class="poppins-font text-xxs text-yellow-100 md:text-sm leading-tight italic mt-7 text-center md:mt-2"
             >
-              I AM MULTIDISCIPLINARY INDIVIDUAL WITH STRONG PASSION <br />
-              TO TRANSFORM PROBLEMS INTO BASIC AND INTUITIVE SOLUTIONS
+              I AM MULTIDISCIPLINARY INDIVIDUAL WITH STRONG PASSION TO TRANSFORM
+              PROBLEMS INTO BASIC AND INTUITIVE SOLUTIONS
             </h2>
           </div>
         </div>
