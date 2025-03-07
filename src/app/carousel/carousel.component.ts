@@ -3,8 +3,10 @@ import {
   AfterViewInit,
   ViewChild,
   ElementRef,
-  HostListener,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
@@ -12,7 +14,16 @@ import {
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements AfterViewInit {
-  @ViewChild('slider1', { static: false }) slider1!: ElementRef;
+  @ViewChild('carousel', { static: false }) carousel!: ElementRef;
+  @ViewChild('carousel', { read: ElementRef }) inputsContainer!: ElementRef;
+
+  isDragging = false;
+  startX = 0;
+  currentPosition = 3; // Set initial position to 3 (third slide)
+  totalSlides = 8;
+  dragThreshold = 50; // Customize drag threshold
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   certificates = {
     list: [
@@ -59,83 +70,93 @@ export class CarouselComponent implements AfterViewInit {
     ],
   };
 
-  currentIndex = 0;
-  isDragging = false;
-  startY = 0;
-  scrollTop = 0;
-
   ngAfterViewInit() {
-    this.updateCarouselPosition();
-  }
+    if (isPlatformBrowser(this.platformId)) {
+      const carouselElement = this.carousel.nativeElement;
 
-  // Mouse down event to start dragging
-  @HostListener('mousedown', ['$event'])
-  onMouseDown(event: MouseEvent) {
-    // Type assertion to ensure target is an HTMLElement
-    const target = event.target as HTMLElement;
+      // Update carousel to reflect the 3rd slide at the start
+      this.updateCarousel();
 
-    // Only initialize dragging if the mouse is inside the carousel container
-    if (target.closest('.carousel__container')) {
-      this.isDragging = true;
-      this.startY = event.pageY;
-      const container = this.slider1.nativeElement.querySelector(
-        '.carousel__container'
+      // Mouse events
+      carouselElement.addEventListener('mousedown', (e: MouseEvent) =>
+        this.onDragStart(e)
       );
-      this.scrollTop = container.scrollTop;
-      this.slider1.nativeElement.style.cursor = 'grabbing'; // Change cursor on drag
+      document.addEventListener('mousemove', (e: MouseEvent) =>
+        this.onDragMove(e)
+      );
+      document.addEventListener('mouseup', () => this.onDragEnd());
+
+      // Touch events (for mobile)
+      carouselElement.addEventListener('touchstart', (e: TouchEvent) =>
+        this.onDragStart(e)
+      );
+      document.addEventListener('touchmove', (e: TouchEvent) =>
+        this.onDragMove(e)
+      );
+      document.addEventListener('touchend', () => this.onDragEnd());
     }
   }
 
-  // Mouse move event to drag
-  @HostListener('mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    if (!this.isDragging) return;
+  onDragStart(event: MouseEvent | TouchEvent) {
+    if (!isPlatformBrowser(this.platformId)) return;
 
-    const container = this.slider1.nativeElement.querySelector(
-      '.carousel__container'
-    );
-    const y = event.pageY;
-    const walk = (this.startY - y) * 2; // Adjust the speed of drag (sensitivity)
-    container.scrollTop = this.scrollTop + walk;
+    this.isDragging = true;
+    this.startX = this.getClientX(event);
+    this.carousel.nativeElement.style.cursor = 'grabbing';
   }
 
-  // Mouse up event to stop dragging
-  @HostListener('mouseup')
-  onMouseUp() {
+  onDragMove(event: MouseEvent | TouchEvent) {
+    if (!this.isDragging || !isPlatformBrowser(this.platformId)) return;
+
+    event.preventDefault(); // Prevents scrolling on mobile
+
+    let diff = this.getClientX(event) - this.startX;
+
+    if (diff > this.dragThreshold && this.currentPosition > 1) {
+      this.currentPosition--;
+      this.updateCarousel();
+      this.isDragging = false;
+    }
+
+    if (diff < -this.dragThreshold && this.currentPosition < this.totalSlides) {
+      this.currentPosition++;
+      this.updateCarousel();
+      this.isDragging = false;
+    }
+  }
+
+  onDragEnd() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     this.isDragging = false;
-    this.slider1.nativeElement.style.cursor = 'grab'; // Reset cursor after dragging
+    this.carousel.nativeElement.style.cursor = 'grab';
   }
 
-  // Mouse leave event to stop dragging if mouse leaves the area
-  @HostListener('mouseleave')
-  onMouseLeave() {
-    this.isDragging = false;
-    this.slider1.nativeElement.style.cursor = 'grab'; // Reset cursor if mouse leaves
-  }
+  updateCarousel() {
+    if (!isPlatformBrowser(this.platformId)) return;
 
-  // Update carousel position
-  updateCarouselPosition() {
-    const container = this.slider1.nativeElement.querySelector(
-      '.carousel__container'
+    // Find all input radio buttons
+    const inputs = this.inputsContainer.nativeElement.querySelectorAll(
+      "input[name='position']"
     );
-    const slideHeight =
-      container.querySelector('.carousel__slide')?.clientHeight || 0;
-    container.style.transform = `translateY(-${
-      this.currentIndex * slideHeight
-    }px)`;
+
+    // Check the radio button corresponding to the current position
+    if (inputs[this.currentPosition - 1]) {
+      inputs[this.currentPosition - 1].checked = true;
+
+      // Immediately update the carousel position
+      requestAnimationFrame(() => {
+        this.carousel.nativeElement.style.setProperty(
+          '--position',
+          this.currentPosition.toString()
+        );
+      });
+    }
   }
 
-  // Method to move to the next slide
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.certificates.list.length;
-    this.updateCarouselPosition();
-  }
-
-  // Method to move to the previous slide
-  prevSlide() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.certificates.list.length) %
-      this.certificates.list.length;
-    this.updateCarouselPosition();
+  getClientX(event: MouseEvent | TouchEvent): number {
+    return event instanceof MouseEvent
+      ? event.clientX
+      : event.touches[0].clientX;
   }
 }

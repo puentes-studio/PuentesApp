@@ -1,4 +1,4 @@
-<div>
+<div #carousel>
   <input type="radio" name="position" checked />
   <input type="radio" name="position" />
   <input type="radio" name="position" />
@@ -11,7 +11,7 @@
   <ul id="carousel">
     <li class="item" *ngFor="let item of certificates.list">
       <img
-        class="flex items-center justify-center max-w-96 py-4"
+        class="flex items-center justify-center md:max-w-72 max-w-64 py-4"
         [src]="item.imageUrl"
         [alt]="item.name"
       />
