@@ -6,6 +6,7 @@ import { WorkViewComponent } from './work-view/work-view.component';
 import { WorksPageComponent } from './works-page/works-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { PdfCvComponent } from './pdf-cv/pdf-cv.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'pdf-cv',
+    component: PdfCvComponent,
   },
 ];
 

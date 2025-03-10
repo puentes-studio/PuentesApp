@@ -6,6 +6,16 @@ import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  cv = {
+    list: [
+      {
+        name: 'cv-developer-designer',
+        year: '2025',
+        pdfCvUrl: '../../assets/C_V-Vlad_Beltran-EN.pdf',
+      },
+    ],
+  };
+
   // boolean variable to track the mobile menu state
   isMobileMenuOpen = false;
 
