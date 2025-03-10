@@ -24,9 +24,7 @@ input {
 }
 
 button {
-  padding: 8px 12px;
-
-  color: white;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
 
