@@ -1,1 +1,16 @@
-<p>client-carousel works!</p>
+<div
+  class="slider w-screen overflow-hidden relative m-auto h-28 bg-white -mb-16 md:mb-0 mt-8"
+>
+  <ul class="slide-track flex">
+    <li
+      class="flex justify-center items-center mx-9"
+      *ngFor="let item of clientsLogo.list.concat(clientsLogo.list)"
+    >
+      <img
+        class="flex items-center justify-center w-24"
+        [src]="item.imageUrl"
+        [alt]="item.name"
+      />
+    </li>
+  </ul>
+</div>

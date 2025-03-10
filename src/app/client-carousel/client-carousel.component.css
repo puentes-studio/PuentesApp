@@ -1,0 +1,27 @@
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 12));
+  }
+}
+
+/* Styling */
+
+.slide-track {
+  animation: scroll 120s linear infinite;
+  width: calc(250px * 12 * 2); /* Adjusted for smooth looping */
+}
