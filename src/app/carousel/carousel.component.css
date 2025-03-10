@@ -1,11 +1,19 @@
-.container {
-  height: 600px;
-  margin: 0;
-  display: grid;
-  grid-template-rows: 500px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
-  align-items: center;
-  justify-items: center;
+/* Hide default radio */
+input[type="radio"] {
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgb(74, 74, 74); /* Border color */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style when checked */
+input[type="radio"]:checked {
+  background-color: #a1fb5b; /* Change to your preferred color */
+  border-color: #353535;
 }
 
 ul#carousel {

@@ -21,6 +21,7 @@ import { SkillBubblesComponent } from './skill-bubbles/skill-bubbles.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { ClientCarouselComponent } from './client-carousel/client-carousel.component';
+import { PdfCvComponent } from './pdf-cv/pdf-cv.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ClientCarouselComponent } from './client-carousel/client-carousel.compo
     SkillBubblesComponent,
     ContactComponent,
     ClientCarouselComponent,
+    PdfCvComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
