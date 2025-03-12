@@ -83,10 +83,10 @@
 
 @keyframes marquee-scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0); /* Start at the left edge */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Scroll to the left */
   }
 }
 
@@ -130,6 +130,6 @@
   .project-info:active .project-description,
   .project-info:hover .project-description {
     overflow-x: scroll;
-    max-width: 300px;
+    /* max-width: 300px; */
   }
 }
