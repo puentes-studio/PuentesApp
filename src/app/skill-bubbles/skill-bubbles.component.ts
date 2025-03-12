@@ -33,7 +33,7 @@ export class SkillBubblesComponent {
         name: 'MySQL',
       },
       {
-        name: 'Wordpress',
+        name: 'Logic',
       },
     ],
     soft: [

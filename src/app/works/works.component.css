@@ -96,7 +96,7 @@
 }
 
 .marquee-active {
-  animation: marquee-scroll 15s linear infinite;
+  animation: marquee-scroll 35s linear infinite;
 }
 
 .project-title,
