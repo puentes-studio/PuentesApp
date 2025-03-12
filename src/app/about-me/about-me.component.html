@@ -53,6 +53,8 @@
       src="assets/img/dev-img02.png"
       (mouseover)="changeImage('assets/img/dev-img01.png')"
       (mouseout)="resetImage()"
+      (touchstart)="changeImage('assets/img/dev-img01.png')"
+      (touchend)="resetImage()"
       class="about-img cursor-progress max-h-img min-h-80 mb-7 md:ml-8"
       alt="About me Developer, Frontend developer, Designer"
     />
