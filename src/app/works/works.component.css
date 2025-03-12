@@ -81,6 +81,40 @@
   display: block;
 }
 
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.marquee-active {
+  animation: marquee-scroll 15s linear infinite;
+}
+
+.project-title,
+.project-description {
+  overflow: hidden;
+}
+
+.project-title .marquee,
+.project-description .marquee {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.project-title .marquee-active,
+.project-description .marquee-active {
+  animation: marquee-scroll 15s linear infinite;
+}
+
 @media (min-width: 768px) {
   .text-10xl {
     font-size: 10rem;

@@ -5,6 +5,8 @@ import {
   Input,
   OnInit,
   PLATFORM_ID,
+  Renderer2,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
@@ -111,7 +113,9 @@ export class WorksComponent implements OnInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    private router: Router
+    private router: Router,
+    private renderer: Renderer2,
+    private cdr: ChangeDetectorRef // Add ChangeDetectorRef for detecting changes
   ) {}
 
   ngOnInit(): void {
@@ -141,8 +145,9 @@ export class WorksComponent implements OnInit {
       this.isMobileView = (event.target as Window).innerWidth < 500;
     }
   }
-
   toggleDescription(index: number, show: boolean): void {
     this.hoveredIndex[index] = show;
+    // Angular will handle class changes when hoveredIndex is toggled
+    this.cdr.detectChanges(); // Force Angular to detect changes
   }
 }

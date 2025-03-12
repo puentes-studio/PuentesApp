@@ -23,7 +23,7 @@
           class="project-container flex flex-row h-16 justify-between items-center"
           [ngClass]="[item.backgroundColor, item.fontColor]"
         >
-          <div class="relative flex flex-col">
+          <!-- <div class="relative flex flex-col">
             <div class="project-info flex flex-row">
               <div>
                 <h4 class="w-24 md:w-40 hidden basis-1/5">{{ item.type }}</h4>
@@ -41,6 +41,39 @@
                     class="project-description md:max-w-xl overflow-hidden max-w-80"
                     *ngIf="hoveredIndex[i]"
                     >{{ item.projectDescription // }}</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="relative flex flex-col">
+            <div class="project-info flex flex-row">
+              <div>
+                <h4 class="w-24 md:w-40 hidden basis-1/5">{{ item.type }}</h4>
+              </div>
+              <div class="basis-1/5 md:basis-2/3">
+                <a
+                  (mouseover)="toggleDescription(i, true)"
+                  (mouseout)="toggleDescription(i, false)"
+                  (touchstart)="toggleDescription(i, true)"
+                  (touchend)="toggleDescription(i, false)"
+                  class="project-title text-7xl overflow-hidden whitespace-nowrap block relative"
+                  [routerLink]="['/work-view', i]"
+                  rel="noopener noreferrer"
+                >
+                  <!-- Marquee effect for the title initially -->
+                  <span
+                    *ngIf="!hoveredIndex[i]"
+                    class="marquee marquee-active"
+                    >{{ item.name }}</span
+                  >
+
+                  <!-- Marquee effect for the description on hover or touch -->
+                  <span
+                    *ngIf="hoveredIndex[i]"
+                    class="project-description marquee marquee-active"
+                    >{{ item.projectDescription }}</span
                   >
                 </a>
               </div>
