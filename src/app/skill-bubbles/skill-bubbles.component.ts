@@ -21,6 +21,9 @@ export class SkillBubblesComponent {
         name: 'Javascript',
       },
       {
+        name: 'AI',
+      },
+      {
         name: 'React',
       },
       {
@@ -31,9 +34,6 @@ export class SkillBubblesComponent {
       },
       {
         name: 'MySQL',
-      },
-      {
-        name: 'Logic',
       },
     ],
     soft: [
