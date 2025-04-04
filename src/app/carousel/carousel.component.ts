@@ -20,7 +20,7 @@ export class CarouselComponent implements AfterViewInit {
   isDragging = false;
   startX = 0;
   currentPosition = 3; // Set initial position to 3 (third slide)
-  totalSlides = 8;
+  totalSlides = 9;
   dragThreshold = 50; // Customize drag threshold
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
