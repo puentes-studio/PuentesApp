@@ -28,6 +28,11 @@ export class CarouselComponent implements AfterViewInit {
   certificates = {
     list: [
       {
+        name: 'Figma',
+        year: '2025',
+        imageUrl: '../../assets/png-cert/Cert_09.png',
+      },
+      {
         name: 'Mysql',
         year: '2024',
         imageUrl: '../../assets/png-cert/Cert_08.png',
