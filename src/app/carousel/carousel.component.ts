@@ -20,13 +20,18 @@ export class CarouselComponent implements AfterViewInit {
   isDragging = false;
   startX = 0;
   currentPosition = 3; // Set initial position to 3 (third slide)
-  totalSlides = 9;
+  totalSlides = 10;
   dragThreshold = 50; // Customize drag threshold
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   certificates = {
     list: [
+      {
+        name: 'AI Certificate EU',
+        year: '2025',
+        imageUrl: '../../assets/png-cert/Cert_10.png',
+      },
       {
         name: 'Figma',
         year: '2025',

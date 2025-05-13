@@ -18,7 +18,7 @@ input[type="radio"]:checked {
 
 ul#carousel {
   grid-row: 1 / 2;
-  grid-column: 1 / 9;
+  grid-column: 1 / 10;
   width: 100vw;
   height: 500px;
   display: flex;
@@ -27,7 +27,7 @@ ul#carousel {
   overflow: hidden;
   transform-style: preserve-3d;
   perspective: 600px;
-  --items: 9;
+  --items: 10;
   --middle: 4;
   --position: 1;
   pointer-events: none;
@@ -71,6 +71,9 @@ li.item:nth-of-type(8) {
 }
 li.item:nth-of-type(9) {
   --offset: 9;
+}
+li.item:nth-of-type(10) {
+  --offset: 10;
 }
 
 input:nth-of-type(1) {
@@ -137,10 +140,17 @@ input:nth-of-type(8):checked ~ ul#carousel {
   --position: 8;
 }
 
-input:nth-of-type(8) {
+input:nth-of-type(9) {
   grid-column: 10 / 11;
   grid-row: 2 / 3;
 }
 input:nth-of-type(9):checked ~ ul#carousel {
   --position: 9;
+}
+input:nth-of-type(10) {
+  grid-column: 11 / 12;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(10):checked ~ ul#carousel {
+  --position: 10;
 }
